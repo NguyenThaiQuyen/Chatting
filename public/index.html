@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatJS</title>
+    <script src='./socket.io.js'></script>
+    <script src='jquery-3.4.1.min.js'></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="history">
+        <div id = "content-group"></div>
+
+        <div id = "content-message"></div>
+
+        <div class="wrap-message-send" id = "seen">
+            <div >Đã xem</div>
+        </div>
+
+        <div class="wrap-message-recieve" id = "typing" >
+            <div class="">
+                <img src="./image/typing.gif" width="60px" height="40px">
+            </div>
+        </div>
+    </div>
+
+    <div id="chat">
+        <div class="input-group">
+            <input type="text" class="inputText form-control form-control-md"  placeholder="Type here..." onkeypress = "isTyping(event)">
+            <div class="input-group-append">
+                <a href="#" class="inputButton btn btn-send btn-md" onClick = "sendMessage()">
+                    <span class="glyphicon glyphicon-send"></span> Send 
+                </a>
+            </div>
+        </div>
+    </div>
+  
+    <script src="main.js"></script>
+    
+</body>
+</html>
